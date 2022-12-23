@@ -50,7 +50,7 @@ export const bookingMovieTicketReducer = (state = DEFAULT_STATE, action) => {
       if (data.length === 0) {
         return alert("đã hết vé");
       }
-      if (window.confirm(`Bạn có muốn xóa tất cả vé`)) {
+      if (window.confirm(`Bạn có muốn xóa tất cả vé đang chọn`)) {
         data = [];
       }
 
@@ -62,14 +62,17 @@ export const bookingMovieTicketReducer = (state = DEFAULT_STATE, action) => {
     case BOOKED_TICKETS: {
       let dataBookingList = [...state.bookingTicketList];
       let dataBookedList = [...state.bookedList];
+      if (payload.length <= 0) {
+        return alert("Bạn chưa chọn vé nào cả");
+      }
 
       if (window.confirm(`Bạn có muốn đặt các vé đã chọn`)) {
         dataBookedList = [...dataBookedList, ...payload];
         dataBookingList = [];
-      }
 
-      state.bookedList = dataBookedList;
-      state.bookingTicketList = dataBookingList;
+        state.bookedList = dataBookedList;
+        state.bookingTicketList = dataBookingList;
+      }
 
       break;
     }
