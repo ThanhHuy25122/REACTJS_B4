@@ -1,10 +1,10 @@
 import "./App.css";
-import BaiTapDatVeXemPhim from "./components/BaiTapDatVeXemPhim/BaiTapDatVeXemPhim";
+import BookingTickets from "./components/BaiTapDatVeXemPhim/BookingTickets";
 
 function App() {
   return (
     <div className="App">
-      <BaiTapDatVeXemPhim />
+      <BookingTickets />
     </div>
   );
 }

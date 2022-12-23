@@ -1,0 +1,4 @@
+export const BOOK_TICKET = "BOOK_TICKET";
+export const REMOVE_TICKET = "REMOVE_TICKET";
+export const REMOVE_ALL_TICKETS = "REMOVE_ALL_TICKETS";
+export const BOOKED_TICKETS = "BOOKED_TICKETS";
